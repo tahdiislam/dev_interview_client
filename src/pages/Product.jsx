@@ -6,7 +6,6 @@ const Product = ({ product }) => {
   const { id, name, price } = product;
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.itemsList);
-  console.log(cart);
   // add to cart handler
   const handleAddToCart = () => {
     dispatch(

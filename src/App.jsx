@@ -7,13 +7,13 @@ import Cart from "./pages/Cart";
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  console.log(isLoggedIn);
+  const showCart = useSelector((state) => state.cart.showCart);
   return (
     <div className="container mx-auto">
       <Header />
       {!isLoggedIn && <Page1 />}
       {isLoggedIn && <AllProducts />}
-      <Cart />
+      {showCart && <Cart />}
     </div>
   );
 }
